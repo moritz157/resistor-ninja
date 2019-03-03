@@ -20,7 +20,11 @@ mat-button-toggle-group('#numberOfBands'='matButtonToggleGroup')
     mat-button-toggle(value='5') 5
     mat-button-toggle(value='6') 6
 
-span {{ numberOfBands.value * 1 + 1.0 }}
+span {{ numberOfBands.value * 1 + 1.0 }} 
+br
+resistor('[numberOfBands]'='numberOfBands.value')
+
+
 +colorInput('Band 1', 1)
 +colorInput('Band 2', 2)
 +colorInput('Band 3', 3)

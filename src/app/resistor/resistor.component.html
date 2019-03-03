@@ -1,0 +1,15 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="298" height="68" viewBox="0 0 298 68">
+  <g id="Background" transform="translate(-14 -225)">
+    <rect id="Rechteck_385" data-name="Rechteck 385" width="47" [attr.height]="68" rx="5" transform="translate(60, 225)" fill="#eaeaea"></rect>
+    <rect id="Rechteck_386" data-name="Rechteck 386" width="147" [attr.height]="56" transform="translate(93, 231)" fill="#eaeaea"></rect>
+    <rect id="Rechteck_387" data-name="Rechteck 387" width="47" [attr.height]="68" rx="5" transform="translate(219, 225)" fill="#eaeaea"></rect>
+    <rect id="Rechteck_393" data-name="Rechteck 393" width="298" [attr.height]="12" transform="translate(14, 253)" fill="#eaeaea"></rect>
+    <rect id="Band 1" width="12" [attr.height]="numberOfBands != 4 ? 68 : 56" [attr.transform]="numberOfBands != 4 ? 'translate(84, 225)' : 'translate(113,231)'" [attr.fill]="bands[0]"></rect>
+    <rect id="Band 2" width="12" [attr.height]="56" [attr.transform]="numberOfBands != 4 ? 'translate(114 231)' : 'translate(142 231)'" [attr.fill]="bands[1]"></rect>
+    <rect id="Band 3" width="12" [attr.height]="56" [attr.transform]="numberOfBands != 4 ? 'translate(142 231)' : 'translate(170 231)'" [attr.fill]="bands[2]"></rect>
+    <rect id="Band 4" width="12" [attr.height]="numberOfBands == 4 ? 68 : 56" [attr.transform]="numberOfBands != 4 ? 'translate(170 231)' : 'translate(228 225)'" [attr.fill]="bands[3]"></rect>
+    <rect id="Band 5" width="12" [attr.height]="68" transform="translate(228 225)" [attr.fill]="numberOfBands &lt; 5 ? 'transparent' : bands[4]"></rect>
+    <rect id="Band 6" width="12" [attr.height]="68" transform="translate(245 225)" [attr.fill]="numberOfBands != 6 ? 'transparent' : bands[5]"></rect>
+  </g>
+</svg>

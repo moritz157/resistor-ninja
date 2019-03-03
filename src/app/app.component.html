@@ -4,7 +4,8 @@
   <mat-button-toggle value="4" checked="checked">4</mat-button-toggle>
   <mat-button-toggle value="5">5</mat-button-toggle>
   <mat-button-toggle value="6">6</mat-button-toggle>
-</mat-button-toggle-group><span>{{ numberOfBands.value * 1 + 1.0 }}</span>
+</mat-button-toggle-group><span>{{ numberOfBands.value * 1 + 1.0 }} </span><br/>
+<resistor [numberOfBands]="numberOfBands.value"></resistor>
 <mat-form-field *ngIf="1&lt; numberOfBands.value * 1+ 1">
   <mat-select placeholder="Band 1">
     <mat-option value="0" *ngIf="1 &lt; 5">Black</mat-option>
