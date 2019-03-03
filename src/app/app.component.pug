@@ -14,24 +14,23 @@ mixin colorInput(placeholder, index)
             mat-option(value='0.1', '*ngIf'=index+' > 3 && '+index+' < 6') Gold 
             mat-option(value='0.01', '*ngIf'=index+' > 3 && '+index+' < 6') Silver
 
-h1 resistor-ninja
-mat-button-toggle-group('#numberOfBands'='matButtonToggleGroup')
-    mat-button-toggle(value='4', checked) 4
-    mat-button-toggle(value='5') 5
-    mat-button-toggle(value='6') 6
+main
+    h1 resistor-ninja
+    mat-button-toggle-group('#numberOfBands'='matButtonToggleGroup')
+        mat-button-toggle(value='4', checked) 4
+        mat-button-toggle(value='5') 5
+        mat-button-toggle(value='6') 6
 
-span {{ numberOfBands.value * 1 + 1.0 }} 
-br
-resistor('[numberOfBands]'='numberOfBands.value')
+    resistor('[numberOfBands]'='numberOfBands.value')
 
 
-+colorInput('Band 1', 1)
-+colorInput('Band 2', 2)
-+colorInput('Band 3', 3)
-+colorInput('Band 4', 4)
-+colorInput('Band 5', 5)
-+colorInput('Band 6', 6)
+    +colorInput('Band 1', 1)
+    +colorInput('Band 2', 2)
+    +colorInput('Band 3', 3)
+    +colorInput('Band 4', 4)
+    +colorInput('Band 5', 5)
+    +colorInput('Band 6', 6)
 
-mat-form-field
-    input(type='number', matInput)
-    span(matSuffix) Ω
+    mat-form-field.result
+        input(type='number', matInput, value='100')
+        span(matSuffix) Ω

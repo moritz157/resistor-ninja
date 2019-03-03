@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "run-p pug-it:w server",
-    "server": "ng serve --port 4210",
+    "server": "ng serve --port 4210 --host=0.0.0.0",
     "prebuild": "yarn run pug-it",
     "build": "ng build",
     "test": "ng test",
