@@ -2,6 +2,12 @@
 
 resistor ninja is a clean and beautiful resistor calculator built with angular, pug and material design. It provides the ability to effortlessly convert a color-code into a resistor value and reverse - no matter if it's a 4-, 5- or 6-Band resistor
 
+# roadmap
+- Two-way-calculation
+- colored dots inside the select-menus
+- autoformatting between Ω, kΩ and MΩ
+- PWA
+
 # contribute
 You want to contribute to this project? Great! Here is how to install everything you need to start working:
 After you cloned or downloaded the repository, just use `npm install` to install all the dependencies (You don't have nodejs and npm installed? Download it [here](https://nodejs.org/en/download/)).
