@@ -4,7 +4,6 @@ resistor ninja is a clean and beautiful resistor calculator built with angular, 
 
 # roadmap
 - Two-way-calculation
-- colored dots inside the select-menus
 - autoformatting between Ω, kΩ and MΩ
 - PWA
 

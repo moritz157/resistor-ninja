@@ -7,100 +7,244 @@
     <mat-button-toggle value="6">6</mat-button-toggle>
   </mat-button-toggle-group>
   <resistor [numberOfBands]="numberOfBands.value" [bands]="colorBands"></resistor>
-  <mat-form-field *ngIf="1&lt; numberOfBands.value * 1+ 1">
-    <mat-select placeholder="Band 1" [(value)]="bands[1*1-1]" (selectionChange)="bandChanged()">
-      <mat-option value="0" *ngIf="1 &lt; 5 &amp;&amp; 1 != 0">Black</mat-option>
-      <mat-option value="1">Brown</mat-option>
-      <mat-option value="2">Red</mat-option>
-      <mat-option value="3" *ngIf="1 != 5">Orange</mat-option>
-      <mat-option value="4" *ngIf="1 != 5">Yellow</mat-option>
-      <mat-option value="5" *ngIf="1 &lt; 6">Green</mat-option>
-      <mat-option value="6">Blue</mat-option>
-      <mat-option value="7">Violet</mat-option>
-      <mat-option value="8" *ngIf="1 &lt; 6">Grey</mat-option>
-      <mat-option value="9" *ngIf="1 &lt; 5">White</mat-option>
-      <mat-option value="-1" *ngIf="1 &gt; 3 &amp;&amp; 1 &lt; 6">Gold </mat-option>
-      <mat-option value="-2" *ngIf="1 &gt; 3 &amp;&amp; 1 &lt; 6">Silver</mat-option>
+  <mat-form-field class="color-input" *ngIf="1&lt; numberOfBands.value * 1+ 1">
+    <mat-select aria-label="Band 1" placeholder="Band 1" [(value)]="bands[1*1-1]" (selectionChange)="bandChanged()">
+      <mat-option role="listitem" value="0" *ngIf="1 &lt; 5 &amp;&amp; 1 != 0"> 
+        <div class="circle" [style.background-color]="colors['0']"></div>Black
+      </mat-option>
+      <mat-option role="listitem" value="1"> 
+        <div class="circle" [style.background-color]="colors['1']"></div>Brown
+      </mat-option>
+      <mat-option role="listitem" value="2"> 
+        <div class="circle" [style.background-color]="colors['2']"></div>Red
+      </mat-option>
+      <mat-option role="listitem" value="3" *ngIf="1 != 5"> 
+        <div class="circle" [style.background-color]="colors['3']"></div>Orange
+      </mat-option>
+      <mat-option role="listitem" value="4" *ngIf="1 != 5"> 
+        <div class="circle" [style.background-color]="colors['4']"></div>Yellow
+      </mat-option>
+      <mat-option role="listitem" value="5" *ngIf="1 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['5']"></div>Green
+      </mat-option>
+      <mat-option role="listitem" value="6"> 
+        <div class="circle" [style.background-color]="colors['6']"></div>Blue
+      </mat-option>
+      <mat-option role="listitem" value="7"> 
+        <div class="circle" [style.background-color]="colors['7']"></div>Violet
+      </mat-option>
+      <mat-option role="listitem" value="8" *ngIf="1 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['8']"></div>Grey
+      </mat-option>
+      <mat-option role="listitem" value="9" *ngIf="1 &lt; 5"> 
+        <div class="circle" [style.background-color]="colors['9']"></div>White
+      </mat-option>
+      <mat-option role="listitem" value="-1" *ngIf="1 &gt; 3 &amp;&amp; 1 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.1']"></div>Gold 
+      </mat-option>
+      <mat-option role="listitem" value="-2" *ngIf="1 &gt; 3 &amp;&amp; 1 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.01']"></div>Silver
+      </mat-option>
     </mat-select>
   </mat-form-field>
-  <mat-form-field *ngIf="2&lt; numberOfBands.value * 1+ 1">
-    <mat-select placeholder="Band 2" [(value)]="bands[2*1-1]" (selectionChange)="bandChanged()">
-      <mat-option value="0" *ngIf="2 &lt; 5 &amp;&amp; 2 != 0">Black</mat-option>
-      <mat-option value="1">Brown</mat-option>
-      <mat-option value="2">Red</mat-option>
-      <mat-option value="3" *ngIf="2 != 5">Orange</mat-option>
-      <mat-option value="4" *ngIf="2 != 5">Yellow</mat-option>
-      <mat-option value="5" *ngIf="2 &lt; 6">Green</mat-option>
-      <mat-option value="6">Blue</mat-option>
-      <mat-option value="7">Violet</mat-option>
-      <mat-option value="8" *ngIf="2 &lt; 6">Grey</mat-option>
-      <mat-option value="9" *ngIf="2 &lt; 5">White</mat-option>
-      <mat-option value="-1" *ngIf="2 &gt; 3 &amp;&amp; 2 &lt; 6">Gold </mat-option>
-      <mat-option value="-2" *ngIf="2 &gt; 3 &amp;&amp; 2 &lt; 6">Silver</mat-option>
+  <mat-form-field class="color-input" *ngIf="2&lt; numberOfBands.value * 1+ 1">
+    <mat-select aria-label="Band 2" placeholder="Band 2" [(value)]="bands[2*1-1]" (selectionChange)="bandChanged()">
+      <mat-option role="listitem" value="0" *ngIf="2 &lt; 5 &amp;&amp; 2 != 0"> 
+        <div class="circle" [style.background-color]="colors['0']"></div>Black
+      </mat-option>
+      <mat-option role="listitem" value="1"> 
+        <div class="circle" [style.background-color]="colors['1']"></div>Brown
+      </mat-option>
+      <mat-option role="listitem" value="2"> 
+        <div class="circle" [style.background-color]="colors['2']"></div>Red
+      </mat-option>
+      <mat-option role="listitem" value="3" *ngIf="2 != 5"> 
+        <div class="circle" [style.background-color]="colors['3']"></div>Orange
+      </mat-option>
+      <mat-option role="listitem" value="4" *ngIf="2 != 5"> 
+        <div class="circle" [style.background-color]="colors['4']"></div>Yellow
+      </mat-option>
+      <mat-option role="listitem" value="5" *ngIf="2 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['5']"></div>Green
+      </mat-option>
+      <mat-option role="listitem" value="6"> 
+        <div class="circle" [style.background-color]="colors['6']"></div>Blue
+      </mat-option>
+      <mat-option role="listitem" value="7"> 
+        <div class="circle" [style.background-color]="colors['7']"></div>Violet
+      </mat-option>
+      <mat-option role="listitem" value="8" *ngIf="2 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['8']"></div>Grey
+      </mat-option>
+      <mat-option role="listitem" value="9" *ngIf="2 &lt; 5"> 
+        <div class="circle" [style.background-color]="colors['9']"></div>White
+      </mat-option>
+      <mat-option role="listitem" value="-1" *ngIf="2 &gt; 3 &amp;&amp; 2 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.1']"></div>Gold 
+      </mat-option>
+      <mat-option role="listitem" value="-2" *ngIf="2 &gt; 3 &amp;&amp; 2 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.01']"></div>Silver
+      </mat-option>
     </mat-select>
   </mat-form-field>
-  <mat-form-field *ngIf="3&lt; numberOfBands.value * 1+ 1">
-    <mat-select placeholder="Band 3" [(value)]="bands[3*1-1]" (selectionChange)="bandChanged()">
-      <mat-option value="0" *ngIf="3 &lt; 5 &amp;&amp; 3 != 0">Black</mat-option>
-      <mat-option value="1">Brown</mat-option>
-      <mat-option value="2">Red</mat-option>
-      <mat-option value="3" *ngIf="3 != 5">Orange</mat-option>
-      <mat-option value="4" *ngIf="3 != 5">Yellow</mat-option>
-      <mat-option value="5" *ngIf="3 &lt; 6">Green</mat-option>
-      <mat-option value="6">Blue</mat-option>
-      <mat-option value="7">Violet</mat-option>
-      <mat-option value="8" *ngIf="3 &lt; 6">Grey</mat-option>
-      <mat-option value="9" *ngIf="3 &lt; 5">White</mat-option>
-      <mat-option value="-1" *ngIf="3 &gt; 3 &amp;&amp; 3 &lt; 6">Gold </mat-option>
-      <mat-option value="-2" *ngIf="3 &gt; 3 &amp;&amp; 3 &lt; 6">Silver</mat-option>
+  <mat-form-field class="color-input" *ngIf="3&lt; numberOfBands.value * 1+ 1">
+    <mat-select aria-label="Band 3" placeholder="Band 3" [(value)]="bands[3*1-1]" (selectionChange)="bandChanged()">
+      <mat-option role="listitem" value="0" *ngIf="3 &lt; 5 &amp;&amp; 3 != 0"> 
+        <div class="circle" [style.background-color]="colors['0']"></div>Black
+      </mat-option>
+      <mat-option role="listitem" value="1"> 
+        <div class="circle" [style.background-color]="colors['1']"></div>Brown
+      </mat-option>
+      <mat-option role="listitem" value="2"> 
+        <div class="circle" [style.background-color]="colors['2']"></div>Red
+      </mat-option>
+      <mat-option role="listitem" value="3" *ngIf="3 != 5"> 
+        <div class="circle" [style.background-color]="colors['3']"></div>Orange
+      </mat-option>
+      <mat-option role="listitem" value="4" *ngIf="3 != 5"> 
+        <div class="circle" [style.background-color]="colors['4']"></div>Yellow
+      </mat-option>
+      <mat-option role="listitem" value="5" *ngIf="3 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['5']"></div>Green
+      </mat-option>
+      <mat-option role="listitem" value="6"> 
+        <div class="circle" [style.background-color]="colors['6']"></div>Blue
+      </mat-option>
+      <mat-option role="listitem" value="7"> 
+        <div class="circle" [style.background-color]="colors['7']"></div>Violet
+      </mat-option>
+      <mat-option role="listitem" value="8" *ngIf="3 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['8']"></div>Grey
+      </mat-option>
+      <mat-option role="listitem" value="9" *ngIf="3 &lt; 5"> 
+        <div class="circle" [style.background-color]="colors['9']"></div>White
+      </mat-option>
+      <mat-option role="listitem" value="-1" *ngIf="3 &gt; 3 &amp;&amp; 3 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.1']"></div>Gold 
+      </mat-option>
+      <mat-option role="listitem" value="-2" *ngIf="3 &gt; 3 &amp;&amp; 3 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.01']"></div>Silver
+      </mat-option>
     </mat-select>
   </mat-form-field>
-  <mat-form-field *ngIf="4&lt; numberOfBands.value * 1+ 1">
-    <mat-select placeholder="Band 4" [(value)]="bands[4*1-1]" (selectionChange)="bandChanged()">
-      <mat-option value="0" *ngIf="4 &lt; 5 &amp;&amp; 4 != 0">Black</mat-option>
-      <mat-option value="1">Brown</mat-option>
-      <mat-option value="2">Red</mat-option>
-      <mat-option value="3" *ngIf="4 != 5">Orange</mat-option>
-      <mat-option value="4" *ngIf="4 != 5">Yellow</mat-option>
-      <mat-option value="5" *ngIf="4 &lt; 6">Green</mat-option>
-      <mat-option value="6">Blue</mat-option>
-      <mat-option value="7">Violet</mat-option>
-      <mat-option value="8" *ngIf="4 &lt; 6">Grey</mat-option>
-      <mat-option value="9" *ngIf="4 &lt; 5">White</mat-option>
-      <mat-option value="-1" *ngIf="4 &gt; 3 &amp;&amp; 4 &lt; 6">Gold </mat-option>
-      <mat-option value="-2" *ngIf="4 &gt; 3 &amp;&amp; 4 &lt; 6">Silver</mat-option>
+  <mat-form-field class="color-input" *ngIf="4&lt; numberOfBands.value * 1+ 1">
+    <mat-select aria-label="Band 4" placeholder="Band 4" [(value)]="bands[4*1-1]" (selectionChange)="bandChanged()">
+      <mat-option role="listitem" value="0" *ngIf="4 &lt; 5 &amp;&amp; 4 != 0"> 
+        <div class="circle" [style.background-color]="colors['0']"></div>Black
+      </mat-option>
+      <mat-option role="listitem" value="1"> 
+        <div class="circle" [style.background-color]="colors['1']"></div>Brown
+      </mat-option>
+      <mat-option role="listitem" value="2"> 
+        <div class="circle" [style.background-color]="colors['2']"></div>Red
+      </mat-option>
+      <mat-option role="listitem" value="3" *ngIf="4 != 5"> 
+        <div class="circle" [style.background-color]="colors['3']"></div>Orange
+      </mat-option>
+      <mat-option role="listitem" value="4" *ngIf="4 != 5"> 
+        <div class="circle" [style.background-color]="colors['4']"></div>Yellow
+      </mat-option>
+      <mat-option role="listitem" value="5" *ngIf="4 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['5']"></div>Green
+      </mat-option>
+      <mat-option role="listitem" value="6"> 
+        <div class="circle" [style.background-color]="colors['6']"></div>Blue
+      </mat-option>
+      <mat-option role="listitem" value="7"> 
+        <div class="circle" [style.background-color]="colors['7']"></div>Violet
+      </mat-option>
+      <mat-option role="listitem" value="8" *ngIf="4 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['8']"></div>Grey
+      </mat-option>
+      <mat-option role="listitem" value="9" *ngIf="4 &lt; 5"> 
+        <div class="circle" [style.background-color]="colors['9']"></div>White
+      </mat-option>
+      <mat-option role="listitem" value="-1" *ngIf="4 &gt; 3 &amp;&amp; 4 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.1']"></div>Gold 
+      </mat-option>
+      <mat-option role="listitem" value="-2" *ngIf="4 &gt; 3 &amp;&amp; 4 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.01']"></div>Silver
+      </mat-option>
     </mat-select>
   </mat-form-field>
-  <mat-form-field *ngIf="5&lt; numberOfBands.value * 1+ 1">
-    <mat-select placeholder="Band 5" [(value)]="bands[5*1-1]" (selectionChange)="bandChanged()">
-      <mat-option value="0" *ngIf="5 &lt; 5 &amp;&amp; 5 != 0">Black</mat-option>
-      <mat-option value="1">Brown</mat-option>
-      <mat-option value="2">Red</mat-option>
-      <mat-option value="3" *ngIf="5 != 5">Orange</mat-option>
-      <mat-option value="4" *ngIf="5 != 5">Yellow</mat-option>
-      <mat-option value="5" *ngIf="5 &lt; 6">Green</mat-option>
-      <mat-option value="6">Blue</mat-option>
-      <mat-option value="7">Violet</mat-option>
-      <mat-option value="8" *ngIf="5 &lt; 6">Grey</mat-option>
-      <mat-option value="9" *ngIf="5 &lt; 5">White</mat-option>
-      <mat-option value="-1" *ngIf="5 &gt; 3 &amp;&amp; 5 &lt; 6">Gold </mat-option>
-      <mat-option value="-2" *ngIf="5 &gt; 3 &amp;&amp; 5 &lt; 6">Silver</mat-option>
+  <mat-form-field class="color-input" *ngIf="5&lt; numberOfBands.value * 1+ 1">
+    <mat-select aria-label="Band 5" placeholder="Band 5" [(value)]="bands[5*1-1]" (selectionChange)="bandChanged()">
+      <mat-option role="listitem" value="0" *ngIf="5 &lt; 5 &amp;&amp; 5 != 0"> 
+        <div class="circle" [style.background-color]="colors['0']"></div>Black
+      </mat-option>
+      <mat-option role="listitem" value="1"> 
+        <div class="circle" [style.background-color]="colors['1']"></div>Brown
+      </mat-option>
+      <mat-option role="listitem" value="2"> 
+        <div class="circle" [style.background-color]="colors['2']"></div>Red
+      </mat-option>
+      <mat-option role="listitem" value="3" *ngIf="5 != 5"> 
+        <div class="circle" [style.background-color]="colors['3']"></div>Orange
+      </mat-option>
+      <mat-option role="listitem" value="4" *ngIf="5 != 5"> 
+        <div class="circle" [style.background-color]="colors['4']"></div>Yellow
+      </mat-option>
+      <mat-option role="listitem" value="5" *ngIf="5 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['5']"></div>Green
+      </mat-option>
+      <mat-option role="listitem" value="6"> 
+        <div class="circle" [style.background-color]="colors['6']"></div>Blue
+      </mat-option>
+      <mat-option role="listitem" value="7"> 
+        <div class="circle" [style.background-color]="colors['7']"></div>Violet
+      </mat-option>
+      <mat-option role="listitem" value="8" *ngIf="5 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['8']"></div>Grey
+      </mat-option>
+      <mat-option role="listitem" value="9" *ngIf="5 &lt; 5"> 
+        <div class="circle" [style.background-color]="colors['9']"></div>White
+      </mat-option>
+      <mat-option role="listitem" value="-1" *ngIf="5 &gt; 3 &amp;&amp; 5 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.1']"></div>Gold 
+      </mat-option>
+      <mat-option role="listitem" value="-2" *ngIf="5 &gt; 3 &amp;&amp; 5 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.01']"></div>Silver
+      </mat-option>
     </mat-select>
   </mat-form-field>
-  <mat-form-field *ngIf="6&lt; numberOfBands.value * 1+ 1">
-    <mat-select placeholder="Band 6" [(value)]="bands[6*1-1]" (selectionChange)="bandChanged()">
-      <mat-option value="0" *ngIf="6 &lt; 5 &amp;&amp; 6 != 0">Black</mat-option>
-      <mat-option value="1">Brown</mat-option>
-      <mat-option value="2">Red</mat-option>
-      <mat-option value="3" *ngIf="6 != 5">Orange</mat-option>
-      <mat-option value="4" *ngIf="6 != 5">Yellow</mat-option>
-      <mat-option value="5" *ngIf="6 &lt; 6">Green</mat-option>
-      <mat-option value="6">Blue</mat-option>
-      <mat-option value="7">Violet</mat-option>
-      <mat-option value="8" *ngIf="6 &lt; 6">Grey</mat-option>
-      <mat-option value="9" *ngIf="6 &lt; 5">White</mat-option>
-      <mat-option value="-1" *ngIf="6 &gt; 3 &amp;&amp; 6 &lt; 6">Gold </mat-option>
-      <mat-option value="-2" *ngIf="6 &gt; 3 &amp;&amp; 6 &lt; 6">Silver</mat-option>
+  <mat-form-field class="color-input" *ngIf="6&lt; numberOfBands.value * 1+ 1">
+    <mat-select aria-label="Band 6" placeholder="Band 6" [(value)]="bands[6*1-1]" (selectionChange)="bandChanged()">
+      <mat-option role="listitem" value="0" *ngIf="6 &lt; 5 &amp;&amp; 6 != 0"> 
+        <div class="circle" [style.background-color]="colors['0']"></div>Black
+      </mat-option>
+      <mat-option role="listitem" value="1"> 
+        <div class="circle" [style.background-color]="colors['1']"></div>Brown
+      </mat-option>
+      <mat-option role="listitem" value="2"> 
+        <div class="circle" [style.background-color]="colors['2']"></div>Red
+      </mat-option>
+      <mat-option role="listitem" value="3" *ngIf="6 != 5"> 
+        <div class="circle" [style.background-color]="colors['3']"></div>Orange
+      </mat-option>
+      <mat-option role="listitem" value="4" *ngIf="6 != 5"> 
+        <div class="circle" [style.background-color]="colors['4']"></div>Yellow
+      </mat-option>
+      <mat-option role="listitem" value="5" *ngIf="6 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['5']"></div>Green
+      </mat-option>
+      <mat-option role="listitem" value="6"> 
+        <div class="circle" [style.background-color]="colors['6']"></div>Blue
+      </mat-option>
+      <mat-option role="listitem" value="7"> 
+        <div class="circle" [style.background-color]="colors['7']"></div>Violet
+      </mat-option>
+      <mat-option role="listitem" value="8" *ngIf="6 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['8']"></div>Grey
+      </mat-option>
+      <mat-option role="listitem" value="9" *ngIf="6 &lt; 5"> 
+        <div class="circle" [style.background-color]="colors['9']"></div>White
+      </mat-option>
+      <mat-option role="listitem" value="-1" *ngIf="6 &gt; 3 &amp;&amp; 6 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.1']"></div>Gold 
+      </mat-option>
+      <mat-option role="listitem" value="-2" *ngIf="6 &gt; 3 &amp;&amp; 6 &lt; 6"> 
+        <div class="circle" [style.background-color]="colors['0.01']"></div>Silver
+      </mat-option>
     </mat-select>
   </mat-form-field>
   <mat-form-field class="result">

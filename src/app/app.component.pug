@@ -1,18 +1,45 @@
+mixin circle()
+    div(class='circle' '[style.background-color]'=attributes.style)
+
 mixin colorInput(placeholder, index)
-    mat-form-field('*ngIf'=index + '< numberOfBands.value * 1+ 1')
-        mat-select(placeholder=placeholder, '[(value)]'='bands['+index+'*1-1]', (selectionChange)='bandChanged()')
-            mat-option(value='0', '*ngIf'=index+' < 5 && ' + index + ' != 0') Black
-            mat-option(value='1') Brown
-            mat-option(value='2') Red
-            mat-option(value='3', '*ngIf'=index+' != 5') Orange
-            mat-option(value='4', '*ngIf'=index+' != 5') Yellow
-            mat-option(value='5', '*ngIf'=index+' < 6') Green
-            mat-option(value='6') Blue
-            mat-option(value='7') Violet
-            mat-option(value='8', '*ngIf'=index+' < 6') Grey
-            mat-option(value='9', '*ngIf'=index+' < 5') White
-            mat-option(value='-1', '*ngIf'=index+' > 3 && '+index+' < 6') Gold 
-            mat-option(value='-2', '*ngIf'=index+' > 3 && '+index+' < 6') Silver
+    mat-form-field('*ngIf'=index + '< numberOfBands.value * 1+ 1' class='color-input')
+        mat-select(aria-label=placeholder placeholder=placeholder, '[(value)]'='bands['+index+'*1-1]', (selectionChange)='bandChanged()')
+            mat-option(role='listitem' value='0', '*ngIf'=index+' < 5 && ' + index + ' != 0') 
+                +circle()(style="colors['0']")
+                | Black
+            mat-option(role='listitem' value='1') 
+                +circle()(style="colors['1']")
+                | Brown
+            mat-option(role='listitem' value='2') 
+                +circle()(style="colors['2']")
+                | Red
+            mat-option(role='listitem' value='3', '*ngIf'=index+' != 5') 
+                +circle()(style="colors['3']")
+                | Orange
+            mat-option(role='listitem' value='4', '*ngIf'=index+' != 5') 
+                +circle()(style="colors['4']")
+                | Yellow
+            mat-option(role='listitem' value='5', '*ngIf'=index+' < 6') 
+                +circle()(style="colors['5']")
+                | Green
+            mat-option(role='listitem' value='6') 
+                +circle()(style="colors['6']")
+                | Blue
+            mat-option(role='listitem' value='7') 
+                +circle()(style="colors['7']")
+                | Violet
+            mat-option(role='listitem' value='8', '*ngIf'=index+' < 6') 
+                +circle()(style="colors['8']")
+                | Grey
+            mat-option(role='listitem' value='9', '*ngIf'=index+' < 5') 
+                +circle()(style="colors['9']")
+                | White
+            mat-option(role='listitem' value='-1', '*ngIf'=index+' > 3 && '+index+' < 6') 
+                +circle()(style="colors['0.1']")
+                | Gold 
+            mat-option(role='listitem' value='-2', '*ngIf'=index+' > 3 && '+index+' < 6') 
+                +circle()(style="colors['0.01']")
+                | Silver
 
 main
     h1 resistor-ninja
