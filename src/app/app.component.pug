@@ -59,5 +59,9 @@ main
     +colorInput('Band 6', 6)
 
     mat-form-field.result
-        input(type='number', matInput, '[value]'='resistance')
-        span(matSuffix) Ω
+        input(type='number', matInput, '[value]'='resistance/resistanceMultiplier')
+        button(matSuffix, 'mat-button', '[matMenuTriggerFor]'="menu", id='resistanceMultiplier') {{ resistanceMultiplier==1 ? 'Ω' : (resistanceMultiplier==1000 ? 'kΩ' : 'MΩ') }}
+            mat-menu('#menu'="matMenu")
+                button(mat-menu-item) Ω
+                button(mat-menu-item) kΩ
+                button(mat-menu-item) MΩ

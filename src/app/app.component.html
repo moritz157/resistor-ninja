@@ -248,6 +248,13 @@
     </mat-select>
   </mat-form-field>
   <mat-form-field class="result">
-    <input type="number" matInput="matInput" [value]="resistance"/><span matSuffix="matSuffix">Ω</span>
+    <input type="number" matInput="matInput" [value]="resistance/resistanceMultiplier"/>
+    <button matSuffix="matSuffix" mat-button="mat-button" [matMenuTriggerFor]="menu" id="resistanceMultiplier">{{ resistanceMultiplier==1 ? 'Ω' : (resistanceMultiplier==1000 ? 'kΩ' : 'MΩ') }}
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item="mat-menu-item">Ω</button>
+        <button mat-menu-item="mat-menu-item">kΩ</button>
+        <button mat-menu-item="mat-menu-item">MΩ</button>
+      </mat-menu>
+    </button>
   </mat-form-field>
 </main>

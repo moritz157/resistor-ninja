@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
   colorBands: string[] = [];
   resistance: number=0;
   numberOfBandsValue: string = '4';
+  resistanceMultiplier = 1;
 
   ngOnInit() {
     this.bandChanged();
@@ -36,6 +37,9 @@ export class AppComponent implements OnInit {
     }else {
       this.resistance = ( parseInt(this.bands[0]) * 100 + parseInt(this.bands[1]) * 10 + parseInt(this.bands[2]) ) * Math.pow(10, parseInt(this.bands[3]))
     }
+    if(this.resistance<1000) this.resistanceMultiplier = 1;
+    if(this.resistance>=1000) this.resistanceMultiplier = 1000
+    if(this.resistance>=1000000) this.resistanceMultiplier = 1000000
   }
 
   bandChanged(): void {
