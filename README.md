@@ -3,6 +3,8 @@
 resistor ninja is a clean and beautiful resistor calculator built with angular, pug and material design. It provides the ability to effortlessly convert a color-code into a resistor value and reverse - no matter if it's a 4-, 5- or 6-Band resistor
 
 # roadmap
+- Logo
+- Internationalization
 - Two-way-calculation
 - PWA
 

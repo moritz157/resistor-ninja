@@ -1,6 +1,11 @@
 
 <main>
-  <h1>resistor-ninja</h1>
+  <div class="title-line">
+    <h1>resistor-ninja</h1><a target="_blank" rel="noopener" href="https://github.com/moritz157/resistor-ninja">
+      <button id="github-btn" mat-stroked-button="mat-stroked-button" color="link"> 
+        <mat-icon svgIcon="github"></mat-icon><span>GitHub</span>
+      </button></a>
+  </div>
   <mat-button-toggle-group #numberOfBands="matButtonToggleGroup" [(value)]="numberOfBandsValue" (change)="numberOfBandsChange($event)">
     <mat-button-toggle value="4" checked="checked">4</mat-button-toggle>
     <mat-button-toggle value="5">5</mat-button-toggle>
@@ -247,13 +252,17 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-  <mat-form-field class="result">
-    <input type="number" matInput="matInput" [value]="resistance/resistanceMultiplier"/>
+  <div class="flip-btn-wrapper">
+    <button id="flip-bands-btn" mat-stroked-button="mat-stroked-button" color="primary" [disabled]="!bandsAreFlippable" (click)="flipBands()">FLIP BANDS</button>
+  </div>
+  <label for="resistance">Resistance</label>
+  <mat-form-field class="result" floatLabel="never" role="log">
+    <input id="resistance" type="number" matInput="matInput" [value]="resistance/resistanceMultiplier"/>
     <button matSuffix="matSuffix" mat-button="mat-button" [matMenuTriggerFor]="menu" id="resistanceMultiplier">{{ resistanceMultiplier==1 ? 'Ω' : (resistanceMultiplier==1000 ? 'kΩ' : 'MΩ') }}
       <mat-menu #menu="matMenu">
-        <button mat-menu-item="mat-menu-item">Ω</button>
-        <button mat-menu-item="mat-menu-item">kΩ</button>
-        <button mat-menu-item="mat-menu-item">MΩ</button>
+        <button mat-menu-item="mat-menu-item" (click)="resistanceMultiplier=1">Ω</button>
+        <button mat-menu-item="mat-menu-item" (click)="resistanceMultiplier=1000">kΩ</button>
+        <button mat-menu-item="mat-menu-item" (click)="resistanceMultiplier=1000000">MΩ</button>
       </mat-menu>
     </button>
   </mat-form-field>

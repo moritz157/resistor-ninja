@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonToggleModule, MatSelectModule, MatInputModule, MatMenuModule, MatButtonModule } from '@angular/material';
+import { MatButtonToggleModule, MatSelectModule, MatInputModule, MatMenuModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { ResistorComponent } from './resistor/resistor.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { ResistorComponent } from './resistor/resistor.component';
     MatSelectModule,
     MatInputModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

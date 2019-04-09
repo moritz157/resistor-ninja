@@ -42,7 +42,12 @@ mixin colorInput(placeholder, index)
                 | Silver
 
 main
-    h1 resistor-ninja
+    div.title-line
+        h1 resistor-ninja
+        a(target='_blank' rel='noopener' href='https://github.com/moritz157/resistor-ninja')
+            button(id='github-btn' mat-stroked-button color="link") 
+                mat-icon(svgIcon='github')
+                span GitHub
     mat-button-toggle-group('#numberOfBands'='matButtonToggleGroup' '[(value)]'='numberOfBandsValue' '(change)'='numberOfBandsChange($event)')
         mat-button-toggle(value='4', checked) 4
         mat-button-toggle(value='5') 5
@@ -58,10 +63,13 @@ main
     +colorInput('Band 5', 5)
     +colorInput('Band 6', 6)
 
-    mat-form-field.result
-        input(type='number', matInput, '[value]'='resistance/resistanceMultiplier')
+    div.flip-btn-wrapper
+        button(id='flip-bands-btn' mat-stroked-button color="primary" '[disabled]'='!bandsAreFlippable' '(click)'='flipBands()') FLIP BANDS
+    label(for='resistance') Resistance
+    mat-form-field.result(floatLabel='never' role='log')
+        input(id='resistance' type='number', matInput, '[value]'='resistance/resistanceMultiplier')
         button(matSuffix, 'mat-button', '[matMenuTriggerFor]'="menu", id='resistanceMultiplier') {{ resistanceMultiplier==1 ? 'Ω' : (resistanceMultiplier==1000 ? 'kΩ' : 'MΩ') }}
             mat-menu('#menu'="matMenu")
-                button(mat-menu-item) Ω
-                button(mat-menu-item) kΩ
-                button(mat-menu-item) MΩ
+                button(mat-menu-item '(click)'='resistanceMultiplier=1') Ω
+                button(mat-menu-item '(click)'='resistanceMultiplier=1000') kΩ
+                button(mat-menu-item '(click)'='resistanceMultiplier=1000000') MΩ
