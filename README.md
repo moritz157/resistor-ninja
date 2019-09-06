@@ -5,6 +5,7 @@ resistor ninja is a clean and beautiful resistor calculator built with angular, 
 # roadmap
 - Logo
 - Internationalization
+- Testing
 - Two-way-calculation
 - PWA
 
