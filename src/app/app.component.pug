@@ -55,13 +55,13 @@ main
 
     resistor('[numberOfBands]'='numberOfBands.value', '[bands]'='colorBands')
 
-
-    +colorInput('Band 1', 1)
-    +colorInput('Band 2', 2)
-    +colorInput('Band 3', 3)
-    +colorInput('Band 4', 4)
-    +colorInput('Band 5', 5)
-    +colorInput('Band 6', 6)
+    div(id='color-input-wrapper')
+        +colorInput('Band 1', 1)
+        +colorInput('Band 2', 2)
+        +colorInput('Band 3', 3)
+        +colorInput('Band 4', 4)
+        +colorInput('Band 5', 5)
+        +colorInput('Band 6', 6)
 
     div.flip-btn-wrapper
         button(id='flip-bands-btn' mat-stroked-button color="primary" '[disabled]'='!bandsAreFlippable' '(click)'='flipBands()') FLIP BANDS

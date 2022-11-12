@@ -35,6 +35,11 @@ main {
         margin-bottom: 11px;
     }
 
+    #color-input-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
     .flip-btn-wrapper {
         display: flex;
         justify-content: flex-end;
@@ -62,4 +67,25 @@ div.circle {
     height: 1em;
     border-radius: 0.5em;
     margin-right: 5px;
+}
+
+@media screen and (min-width: 800px) {
+    mat-button-toggle-group {
+        width: 40%;
+
+        mat-button-toggle {
+            width: 33.3333333%;
+        }
+    }
+
+    #color-input-wrapper {
+        flex-direction: row !important;
+        justify-content: center;
+
+        mat-form-field {
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 7em;
+        }
+    }
 }
